@@ -7,7 +7,7 @@ class Bar{
     x = mouseX;
   }
   void display(){
-    fill(0, 206, 209);
+    fill(0, 191, 255);
     rectMode(CENTER);
     rect(x,y,len,10);
     
