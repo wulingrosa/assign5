@@ -8,7 +8,7 @@ void setup(){
   size(640,480);
   myball=new Ball();
   mybar=new Bar(100);
-  mybrick=new Brick(50,10);
+  mybrick=new Brick(150,10);
   reset();
 
   
@@ -43,8 +43,8 @@ void drawBall(){
    
 
 void drawLife() {
-  fill(230, 74, 96);
-  text("LIFE:", 36, 455);
+  fill(0, 206, 209);
+  text("LIFE:",36, 455);
   ellipse(78,459,15,15);
   ellipse(103,459,15,15);
   ellipse(128,459,15,15);
