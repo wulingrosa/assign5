@@ -2,6 +2,9 @@ Ball []ball;
 Bar board;
 Brick [] rec;
 
+int status = 0;
+int recHit = 0 ;
+float shootAngle ;
 int life ;
 
  
@@ -26,7 +29,16 @@ void draw(){
   textSize(32);
   text("LIFE", 36, height-25);
   fill(0,0,255 );
-
+  
+  /* 
+  for(int i = 0 ;i< life ;i++){
+    noStroke();
+    ellipse(120 + i*30 ,height - 30,20,20);
+  }
+  for (int i=0; i<rec.length; i++){    
+    rec[i].display();
+  }
+  /*
 
 //bar.move();
 //bar.display();
