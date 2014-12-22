@@ -2,19 +2,19 @@ class Brick {
 
   float x;
   float y;
-  float BrickX;
-  float BrickY;
+  float col;
+  float row;
   float size;
   
  void display() {
   fill(0, 206, 209);
-  rect(BrickX,BrickY,30,30);
+  rect(x,y,30,30);
   }
   
- Brick(float x,float y){
+ Brick(float col,float row){
  size=30
-   BrickX=150+x*size;
-   BrickY=150+y*size;
+   x=150+col*size;
+   y=150+row*size;
  }
 
 
