@@ -21,7 +21,7 @@ void draw(){
      bar.move();
     bar.display();
     drawLife();
-    brickMaker(150,10);
+    brickMaker(50,10);
     drawBall();
 }
     
@@ -41,8 +41,7 @@ void drawLife() {
   ellipse(78,459,15,15);
   ellipse(103,459,15,15);
   ellipse(128,459,15,15);
-  /*---------Draw Ship Life---------*/
- 
+
 }
 void brickMaker(int total, int numInRow) {
 
