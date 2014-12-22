@@ -4,8 +4,7 @@ class Ball{
   float xSpeed;
   float ySpeed;
   float size;
-  boolean show ;
- 
+
   void move(){
 
   /*
