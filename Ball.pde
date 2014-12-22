@@ -7,17 +7,25 @@ class Ball{
   boolean show ;
  
   void move(){
+   if (status==GAME_START){
+    x = board.x ;
+    y = board.y-5-this.size/2;
+    }else if(status == GAME_PLAYING){
     x+=xSpeed;
     y+=ySpeed;
     
-    if (x<0 || x>width){
+    
+    if (x<size/2 || x>width-size/2){
       xSpeed*= -1;
     }
-    if (y<0 || y>height){
+    if (y<size/2){
       ySpeed*= -1;
     }
   }
-  
+   if (y>height-size/2 + 10){
+     x = board.x ;
+     y = board.y ;
+    }
 
 
   void display(){
@@ -27,8 +35,16 @@ class Ball{
   Ball(){
     x = random(width);
     y = random(height);
-    xSpeed = random(5);
-    ySpeed = random(10);
+    xSpeed = 5;
+    ySpeed = 3;
     size = 10;
+  }
+Ball(float size, float xSpeed){
+    x = board.x;
+    y = board.y-5-this.size/2;
+    
+    this.xSpeed = xSpeed;
+    this.ySpeed = size;
+    this.size = size;
   }
 }
