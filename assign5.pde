@@ -1,9 +1,8 @@
-Ball []ball;
-Bar board;
-Brick [] rec;
+Ball ball ;
+Bar bar;
+Brick brick;
 
 int life ;
-float shootAngle ;
 
 /*
 int status = 0;
@@ -30,7 +29,12 @@ void draw(){
   textSize(32);
   text("LIFE", 36, height-25);
   fill(0,0,255 );
-  
+    bar.move();
+    bar.display();
+    drawLife();
+    brickMaker(50,10);
+    drawBall();
+
   /* 
   for(int i = 0 ;i< life ;i++){
     noStroke();
@@ -41,14 +45,7 @@ void draw(){
   }
   /*
 
-bar.move();
-bar.display();
-drawLife();
-brickMaker(50,10);
-drawBall();
-
-
-      switch (status){ 
+  /*switch (status){ 
     case GAME_START :
       text("Press Enter",320,420); 
       ball[0].display();
@@ -87,6 +84,7 @@ drawBall();
       fill(140, 6,13 );
       text("GAME PAUSE", width/2 , height/2 );    
       break ;
+      /*
   }
     
 }
@@ -127,9 +125,10 @@ void mouseMoved(){
 
 void reset(){
   life = 3 ;
-  recHit = 0 ;
-  shootAngle = random(-5,5) ;
   board = new Bar(100);
+  bar.x = mouseX;
+  bar.y = height-10;;
+
   rec = new Brick[50];
   for (int i = 0; i< rec.length ; i++){
     rec[i] = new Brick(int(i/5),int(i%5));
