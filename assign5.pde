@@ -26,8 +26,10 @@ void setup(){
 void draw(){
 
   background(255);
-  textSize(32);
+  
+  textSize(16);
   text("LIFE", 36, height-25);
+  
   fill(0,0,255 );
   ellipse(78,459,15,15);
   ellipse(103,459,15,15);
@@ -35,7 +37,6 @@ void draw(){
   
     bar.move();
     bar.display();
-    drawLife();
     brickMaker(50,10);
     drawBall();
 }
