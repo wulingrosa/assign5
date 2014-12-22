@@ -2,17 +2,20 @@ class Brick {
 
   float x;
   float y;
-  float bX;
-  float bY;
-  boolean die=false;
+  float col;
+  float row;
+  float size;
 
- Brick(float x,float y){
-
-   bX=x;
-   bY=y;
+ Brick(float col,float row){
+ size=30
+   x=150+col*size;
+   y=150+row*size;
  }
-  void display() {
-    rect(bX,bY,30,30);
+  
+ void display() {
+  fill(0, 206, 209);
+  rect(x,y,30,30);
   }
+
 
 }
