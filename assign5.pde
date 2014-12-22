@@ -8,7 +8,7 @@ void setup(){
   size(640,480);
   ball=new Ball();
   bar=new Bar(100);
-  brick=new Brick(50,10);
+  brick=new Brick(150,10);
   reset();
 
   
