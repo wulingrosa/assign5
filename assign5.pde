@@ -2,18 +2,19 @@ Ball []ball;
 Bar board;
 Brick [] rec;
 
-int status = 0;
-int recHit = 0 ;
-float shootAngle ;
 int life ;
+float shootAngle ;
 
- 
+/*
+int status = 0;
 final int GAME_START = 0 ;
 final int GAME_WIN = 1 ;
 final int GAME_LOSE = 2 ;
 final int GAME_PAUSE = 3 ;
 final int GAME_PLAYING = 4 ;
 final int GAME_READY = 5 ;
+/*
+
 
 void setup(){
   size(640,480);
@@ -40,12 +41,13 @@ void draw(){
   }
   /*
 
-//bar.move();
-//bar.display();
-//drawLife();
-//brickMaker(50,10);
-//drawBall();
-   
+bar.move();
+bar.display();
+drawLife();
+brickMaker(50,10);
+drawBall();
+
+
       switch (status){ 
     case GAME_START :
       text("Press Enter",320,420); 
@@ -88,28 +90,22 @@ void draw(){
   }
     
 }
-    
+
 void drawBall(){
  if(ball.show==true){
    ball.move();
- 
  }
  ball.display();
 }
  
-   
-
 
 void brickMaker(int total, int numInRow) {
-
   int bX = 135; 
   int bY = 50; 
   int xSpacing = 40; 
   int ySpacing = 50; 
  
-
   for (int i=0; i <total; ++i) {
-
     int x = bX + (xSpacing*(i % numInRow));
     int y = bY + (ySpacing*int(i / numInRow));
      rect(x,y,30,30);
@@ -127,9 +123,20 @@ void mouseMoved(){
    ball.x=bar.x;
    ball.y=bar.y-10;}
 }
-void reset() {
-  bar.x = mouseX;
-  bar.y = height-10;;
-  ball.x = bar.x ;
-  ball.y = bar.y -10;
-}
+
+
+void reset(){
+  life = 3 ;
+  recHit = 0 ;
+  shootAngle = random(-5,5) ;
+  board = new Bar(100);
+  rec = new Brick[50];
+  for (int i = 0; i< rec.length ; i++){
+    rec[i] = new Brick(int(i/5),int(i%5));
+    }
+
+  ball = new Ball[1];
+  for (int i=0; i<ball.length; i++){
+    ball[i] = new Ball(10, shootAngle);   
+  }
+  }
