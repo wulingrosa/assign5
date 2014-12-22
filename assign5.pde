@@ -12,7 +12,7 @@ final int GAME_LOSE = 2 ;
 final int GAME_PAUSE = 3 ;
 final int GAME_PLAYING = 4 ;
 final int GAME_READY = 5 ;
-/*
+*/
 
 
 void setup(){
