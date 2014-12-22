@@ -4,17 +4,18 @@ class Brick {
   float y;
   float BrickX;
   float BrickY;
- 
+  float size;
+  
   void display() {
-  fill(100,50,0);
-    rect(BrickX,BrickY,30,30);
+  fill(0, 206, 209);
+  rect(BrickX,BrickY,size,size);
   }
 
  Brick(float x,float y){
-   BrickX=x;
-   BrickY=y;
+ size=30
+   BrickX=150+x*size;
+   BrickY=150+y*size;
  }
-
 
 
 }
