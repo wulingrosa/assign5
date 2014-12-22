@@ -6,11 +6,11 @@ class Bar{
   void move(){
     x = mouseX;
   }
-  
   void display(){
+    fill(81,94,145);
     rectMode(CENTER);
     rect(x,y,len,10);
-    fill(0,150,255);
+    
   }
   
   Bar(float len){
