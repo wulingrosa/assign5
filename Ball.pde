@@ -13,7 +13,7 @@ class Ball{
     }else if(status == GAME_PLAYING){
     x+=xSpeed;
     y+=ySpeed;
-    
+    }
     
     if (x<size/2 || x>width-size/2){
       xSpeed*= -1;
@@ -21,12 +21,12 @@ class Ball{
     if (y<size/2){
       ySpeed*= -1;
     }
-  }
+  
    if (y>height-size/2 + 10){
      x = board.x ;
      y = board.y ;
     }
-
+}
 
   void display(){
     ellipse(x,y,size,size);
@@ -39,6 +39,7 @@ class Ball{
     ySpeed = 3;
     size = 10;
   }
+  
 Ball(float size, float xSpeed){
     x = board.x;
     y = board.y-5-this.size/2;
