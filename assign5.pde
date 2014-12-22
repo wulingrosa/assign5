@@ -8,7 +8,7 @@ void setup(){
   size(640,480);
   ball=new Ball();
   bar=new Bar(100);
-  brick=new Brick(150,10);
+  brick=new Brick(50,10);
   reset();
 
   
@@ -21,7 +21,7 @@ void draw(){
      bar.move();
     bar.display();
     drawLife();
-    brickMaker(50,10);
+    brickMaker(150,10);
     drawBall();
 }
     
