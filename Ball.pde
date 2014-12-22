@@ -7,6 +7,8 @@ class Ball{
   boolean show ;
  
   void move(){
+
+  /*
    if (status==GAME_START){
     x = board.x ;
     y = board.y-5-this.size/2;
@@ -14,6 +16,9 @@ class Ball{
     x+=xSpeed;
     y+=ySpeed;
     }
+  */
+    x+=xSpeed;
+    y+=ySpeed;
     
     if (x<size/2 || x>width-size/2){
       xSpeed*= -1;
@@ -26,7 +31,7 @@ class Ball{
      x = board.x ;
      y = board.y ;
     }
-}
+  }
 
   void display(){
     ellipse(x,y,size,size);
@@ -39,13 +44,5 @@ class Ball{
     ySpeed = 3;
     size = 10;
   }
-  
-Ball(float size, float xSpeed){
-    x = board.x;
-    y = board.y-5-this.size/2;
-    
-    this.xSpeed = xSpeed;
-    this.ySpeed = size;
-    this.size = size;
-  }
+
 }
