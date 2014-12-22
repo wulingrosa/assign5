@@ -1,6 +1,6 @@
-Ball ball ;
-Bar bar;
-Brick brick;
+Ball mball ;
+Bar mbar;
+Brick mbrick;
 
 int life ;
 
@@ -17,9 +17,9 @@ final int GAME_READY = 5 ;
 
 void setup(){
   size(640,480);
-  ball=new Ball();
-  bar=new Bar(100);
-  brick=new Brick(50,10);
+  mball=new Ball();
+  mbar=new Bar(100);
+  mbrick=new Brick(50,10);
   reset();
 }
 
@@ -29,12 +29,16 @@ void draw(){
   textSize(32);
   text("LIFE", 36, height-25);
   fill(0,0,255 );
+  ellipse(78,459,15,15);
+  ellipse(103,459,15,15);
+  ellipse(128,459,15,15);
+  
     bar.move();
     bar.display();
     drawLife();
     brickMaker(50,10);
     drawBall();
-
+}
   /* 
   for(int i = 0 ;i< life ;i++){
     noStroke();
@@ -86,8 +90,7 @@ void draw(){
       break ;
       }
       */
-  
-}
+
 
 void drawBall(){
  if(ball.show==true){
@@ -125,17 +128,8 @@ void mouseMoved(){
 
 void reset(){
   life = 3 ;
-  board = new Bar(100);
-  bar.x = mouseX;
-  bar.y = height-10;;
-
-  rec = new Brick[50];
-  for (int i = 0; i< rec.length ; i++){
-    rec[i] = new Brick(int(i/5),int(i%5));
-    }
-
-  ball = new Ball[1];
-  for (int i=0; i<ball.length; i++){
-    ball[i] = new Ball(10, shootAngle);   
-  }
+  mbar.x = mouseX;
+  mbar.y = height-10;;
+  mball.x = mybar.x ;
+  mball.y = mybar.y -10;
   }
