@@ -43,7 +43,7 @@ void draw(){
   for (int i=0; i<rec.length; i++){    
     rec[i].display();
   }
-  /*
+  */
 
   /*switch (status){ 
     case GAME_START :
@@ -84,9 +84,9 @@ void draw(){
       fill(140, 6,13 );
       text("GAME PAUSE", width/2 , height/2 );    
       break ;
-      /*
-  }
-    
+      }
+      */
+  
 }
 
 void drawBall(){
