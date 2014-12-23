@@ -130,7 +130,7 @@ void drawBall(){
    
 
 void drawLife() {
-  fill(255,227,170);
+  fill(170,57,57);
   text("LIFE:",36, 455);
   
 int x = 78; 
