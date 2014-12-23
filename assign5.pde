@@ -218,9 +218,11 @@ void ballStick(){
   }
   }
 
-void reset() {
+  
+  void reset() {
   mybar.x = mouseX;
   mybar.y = height-10;;
-  myball.x = mybar.posX ;
-  myball.y = mybar.posY -10;
-  }
+  myball.x = mybar.x ;
+  myball.y = mybar.y -10;
+
+}
