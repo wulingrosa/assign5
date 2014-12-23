@@ -1,8 +1,8 @@
 Bar mybar;
-Ball[] myball;
-Brick[] mybrick;
-//Brick mybrick;
-//Ball myball ;
+Ball myball;
+Brick mybrick;
+//Brick[] mybrick;
+//Ball[] myball ;
 
 final int LIFE_THREE = 0;
 final int LIFE_TWO   = 1;
@@ -34,10 +34,9 @@ void setup(){
 //  status = GAME_START;
   size(640,480);
   background(50, 50, 50);
-  myball=new Ball[2];
+  myball=new Ball();
   mybar=new Bar(100);
-  //mybar=new Bar(width/2, height-50, 3);
-  mybrick=new Brick[100];
+  mybrick=new Brick(50,10);
   reset();
  
 }
@@ -47,7 +46,6 @@ void setup(){
 void draw(){
  
   background(50,50,50);
-  noStroke();
 
    mybar.move();
    mybar.display();
@@ -122,7 +120,7 @@ void draw(){
 }
 
 void drawBall(){
- if(myball.show==true){
+ if(myball.done==true){
    myball.move();
  
  }
