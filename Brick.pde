@@ -16,7 +16,7 @@ class Brick {
  }
   
  void display() {
-  fill(170,57,57);
+  fill(64,127,127);
   rect(x,y,size,size,3);
   }
   
