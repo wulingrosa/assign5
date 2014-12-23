@@ -33,7 +33,7 @@ class Ball{
     float bLeft = bar.posX-bar.barSize/2;
     float bRight = bar.posX+bar.barSize/2;
     
-   if (down >= balll && x>bLeft && x<bRight){
+   if (down >= ball1 && x>bLeft && x<bRight){
         ySpeed *= -1;
   } 
   }
