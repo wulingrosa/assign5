@@ -130,9 +130,10 @@ void drawBall(){
    
 
 void drawLife() {
-  fill(170,57,57);
+  fill(255,227,170);
   text("LIFE:",36, 455);
-  
+  fill(170,57,57);
+
 int x = 78; 
 int y = 459;
 int spacing = 25; 
@@ -163,7 +164,7 @@ x = x + spacing;
 }
 
 void brickMaker(int total, int Row) {
-
+  fill(64,127,127);
   int bX = 135; 
   int bY = 50; 
   int xSpacing = 40; 
@@ -175,7 +176,6 @@ void brickMaker(int total, int Row) {
     int y = bY + (ySpacing*int(i / Row));
      rect(x,y,30,30);
   }
-  fill(64,127,127);
 }
 
 
