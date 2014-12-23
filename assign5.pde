@@ -35,7 +35,8 @@ void setup(){
   size(640,480);
   background(50, 50, 50);
   myball=new Ball[2];
-  mybar=new Bar(width/2, height-50, 3);
+  mybar=new Bar(100);
+  //mybar=new Bar(width/2, height-50, 3);
   mybrick=new Brick[100];
   reset();
  
@@ -163,7 +164,7 @@ x = x + spacing;
   //ellipse(128,459,15,15);
 }
 
-void brickMaker(int total, int numInRow) {
+void brickMaker(int total, int Row) {
 
   int bX = 135; 
   int bY = 50; 
@@ -172,8 +173,8 @@ void brickMaker(int total, int numInRow) {
  
   for (int i=0; i <total; ++i) {
 
-    int x = bX + (xSpacing*(i % numInRow));
-    int y = bY + (ySpacing*int(i / numInRow));
+    int x = bX + (xSpacing*(i % Row));
+    int y = bY + (ySpacing*int(i / Row));
      rect(x,y,30,30);
   }
 }
@@ -196,13 +197,13 @@ if (countBallFrame>30) {
 */
 
 void mousePressed(){
-  if(mouseButton==RIGHT&&myball.show==false){
-    myball.show=true;}
+  if(mouseButton==RIGHT&&myball.gone==false){
+    myball.gone=true;}
 }
   
   
 void mouseMoved(){
-  if(myball.show==false){
+  if(myball.gone==false){
    myball.x=mybar.x;
    myball.y=mybar.y-10;}
 }
