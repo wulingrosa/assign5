@@ -7,7 +7,7 @@ class Bar{
 
 
     Bar(float len){
-    this.y = height-10;
+    this.posY = height-10;
     this.len = len;
   }
   
