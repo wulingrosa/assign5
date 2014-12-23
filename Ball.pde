@@ -3,7 +3,7 @@ class Ball{
   float y;
   float xSpeed;
   float ySpeed;
-  int size=15;
+  int size=20;
   boolean gone = false;
 
   void move(){
@@ -39,7 +39,7 @@ class Ball{
   }
 
   void display(){
-    fill(212,106,106);
+    fill(170,57,57);
     ellipse(x,y,size,size);
   }
 
