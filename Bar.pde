@@ -4,12 +4,6 @@ class Bar{
   int posY;
   float len;
 
-
-    Bar(float len){
-    this.posY = height-10;
-    this.len = len;
-  }  
-
   void display(){
     fill(255);
     rectMode(CENTER);
@@ -19,7 +13,11 @@ class Bar{
   void move(){
   posX = mouseX;
   }
-  
+
+    Bar(float len){
+    this.posY = height-10;
+    this.len = len;
+  }    
 }
 
 
