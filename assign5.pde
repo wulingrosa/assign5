@@ -175,6 +175,7 @@ void brickMaker(int total, int Row) {
     int y = bY + (ySpacing*int(i / Row));
      rect(x,y,30,30);
   }
+  fill(64,127,127);
 }
 
 
