@@ -11,6 +11,11 @@ final int LIFE_NONE  = 3;
 int lifeState;
 
 /*
+int countBallFrame;    
+int ballNum;   
+*/
+
+/*
 int status = 0;
 final int GAME_START = 0 ;
 final int GAME_WIN = 1 ;
@@ -19,8 +24,6 @@ final int GAME_PAUSE = 3 ;
 final int GAME_PLAYING = 4 ;
 final int GAME_READY = 5 ;
 int point;               
-int countBallFrame;    
-int ballNum;    
 int brickCount = 50;
 */
 
@@ -176,7 +179,21 @@ void brickMaker(int total, int numInRow) {
   }
 }
   
-  
+/*void mouseClicked(){
+for (int i=0; i<myball.length-1;i++){
+ Ball ball = myball[i];
+if (countBallFrame>30) {
+      myball[ballNum]= new Ball(bar.posX, bar.posY-7);
+      if (ballNum< myball.length-2 ) {
+        ballNum+=1;
+      } else {
+        ballNum = 0;
+    } 
+   }
+    countBallFrame = 0;
+}}
+*/
+
 void mousePressed(){
   if(mouseButton==RIGHT&&myball.show==false){
     myball.show=true;}
@@ -187,13 +204,6 @@ void mouseMoved(){
    myball.x=mybar.x;
    myball.y=mybar.y-10;}
 }
-void reset() {
-  mybar.x = mouseX;
-  mybar.y = height-10;;
-  myball.x = mybar.x ;
-  myball.y = mybar.y -10;
-
-}
 
 void ballStick(){
   for (int i=0; i<myball.length-1; i++) {
@@ -201,4 +211,13 @@ void ballStick(){
   if (ball==null||ball.gone){
   fill(255,227,170);
   ellipse(mouseX,height-35,15,15);
-  }}}
+  }
+  }
+  }
+
+void reset() {
+  mybar.x = mouseX;
+  mybar.y = height-10;;
+  myball.x = mybar.x ;
+  myball.y = mybar.y -10;
+  }
