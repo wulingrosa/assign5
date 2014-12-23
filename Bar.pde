@@ -12,7 +12,7 @@ class Bar{
   }
   
   void display(){
-    fill(102,153,153);
+    fill(255);
     rect(posX,posY,barSize,barSize/10);
   }
   
