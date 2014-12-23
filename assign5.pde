@@ -4,6 +4,12 @@ Brick[] mybrick;
 //Brick mybrick;
 //Ball myball ;
 
+final int LIFE_THREE = 0;
+final int LIFE_TWO   = 1;
+final int LIFE_ONE   = 2;
+final int LIFE_NONE  = 3;
+int lifeState;
+
 /*
 int status = 0;
 final int GAME_START = 0 ;
@@ -16,19 +22,14 @@ int point;
 int countBallFrame;    
 int ballNum;    
 int brickCount = 50;
-
-
-final int LIFE_THREE = 0;
-final int LIFE_TWO   = 1;
-final int LIFE_ONE   = 2;
-final int LIFE_NONE  = 3;
-int lifeState;
-
 */
 
-void setup(){
-//  status = GAME_START;
 
+
+
+void setup(){
+
+//  status = GAME_START;
   size(640,480);
   background(50, 50, 50);
   myball=new Ball[2];
@@ -45,7 +46,6 @@ void draw(){
   background(50,50,50);
   noStroke();
 
-   
    mybar.move();
    mybar.display();
    drawLife();
@@ -129,14 +129,38 @@ void drawBall(){
    
 
 void drawLife() {
-  fill(0, 191, 255);
+  fill(255,227,170);
   text("LIFE:",36, 455);
-  ellipse(78,459,15,15);
-  ellipse(103,459,15,15);
-  ellipse(128,459,15,15);
-  /*---------Draw Ship Life---------*/
- 
+  
+int x = 78; 
+int y = 459;
+int spacing = 25; 
+int endCircle = 128; 
+
+switch (lifeState){
+  case LIFE_THREE:
+   endCircle = 128;
+   break;
+  case LIFE_TWO:
+   endCircle = 103;
+   break;
+  case LIFE_ONE:
+   endCircle = 78;
+   break;
+  case LIFE_NONE:
+   endCircle = 0;
+   status = GAME_LOSE;
+   break;
 }
+while(x <= endCircle) { 
+ellipse(x, y , 15, 15); 
+x = x + spacing; 
+}
+  //ellipse(78,459,15,15);
+  //ellipse(103,459,15,15);
+  //ellipse(128,459,15,15);
+}
+
 void brickMaker(int total, int numInRow) {
 
   int bX = 135; 
