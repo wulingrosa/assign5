@@ -1,7 +1,9 @@
-Ball myball ;
 Bar mybar;
-Brick mybrick;
- 
+Ball[] myball;
+Brick[] mybrick;
+//Brick mybrick;
+//Ball myball ;
+
 /*
 int status = 0;
 final int GAME_START = 0 ;
@@ -25,28 +27,85 @@ int lifeState;
 */
 
 void setup(){
+//  status = GAME_START;
+
   size(640,480);
-  myball=new Ball();
-  mybar=new Bar(100);
-  mybrick=new Brick(50,10);
+  background(50, 50, 50);
+  myball=new Ball[2];
+  mybar=new Bar(width/2, height-50, 3);
+  mybrick=new Brick[100];
   reset();
-  
-    
+ 
 }
 
 
 
 void draw(){
  
-  background(240, 248, 255);
+  background(50,50,50);
+  noStroke();
+
    
    mybar.move();
    mybar.display();
    drawLife();
    brickMaker(50,10);
+   //drawBrick();
    drawBall();
-   
-   
+   //ballStick();
+
+  /*switch (status){ 
+  
+    case GAME_START :
+    textSize(50);
+    fill(155, 35, 33);
+    printText("Press Enter to Start",320,420); 
+    break ;
+
+      
+    case GAME_PLAYING :
+    background(50,50,50);
+      ball[0].move();
+      ball[0].display();
+      board.move();
+      board.display();
+      checkRecHit();
+      checkWin();
+      checkLose();
+      break ;
+    
+    drawLife();
+    bar.display(); 
+    drawBrick();
+    drawBall();
+    bar.move();
+    ballStick();
+    checkBrickDead();
+    checkBallOut();
+    ifWin();
+    countBallFrame+=1;
+    break;
+      
+      
+    case GAME_WIN :
+      textSize(50);
+      fill(199, 63, 74);
+      printText("GAME WIN!", width/2 , height/2 );
+      break ;
+      
+    case GAME_LOSE :
+      textSize(50);
+      fill(155, 35, 33 );
+      printText("GAME LOSE!", width/2 , height/2 );       
+      break ;
+      
+    case GAME_PAUSE :
+      textSize(50);
+      fill(155, 35, 33);
+      printText("GAME PAUSE", width/2 , height/2 );    
+      break ;
+      }
+      */
    /* 
   for(int i = 0 ;i< life ;i++){
     noStroke();
@@ -56,49 +115,6 @@ void draw(){
     rec[i].display();
   }
   */
-
-  /*switch (status){ 
-    case GAME_START :
-      text("Press Enter",320,420); 
-      ball[0].display();
-      ball[0].move();
-
-      board.move();
-      board.display();
-      break ;
-      
-    case GAME_PLAYING :
-      ball[0].move();
-      ball[0].display();
-      board.move();
-      board.display();
-      checkRecHit();
-      checkWin();
-      checkLose();
-      break ;
-      
-    case GAME_WIN :
-      background(0);
-      textSize(50);
-      fill(250, 244,156 );
-      text("GAME WIN", width/2 , height/2 );
-      break ;
-      
-    case GAME_LOSE :
-      background(0);
-      textSize(50);
-      fill(140, 6,13 );
-      text("GAME LOSE", width/2 , height/2 );       
-      break ;
-      
-    case GAME_PAUSE :
-      textSize(50);
-      fill(140, 6,13 );
-      text("GAME PAUSE", width/2 , height/2 );    
-      break ;
-      }
-      */
-
  
 }
 
