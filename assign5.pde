@@ -168,7 +168,6 @@ void brickMaker(int total, int numInRow) {
   int xSpacing = 40; 
   int ySpacing = 50; 
  
-
   for (int i=0; i <total; ++i) {
 
     int x = bX + (xSpacing*(i % numInRow));
@@ -195,3 +194,11 @@ void reset() {
   myball.y = mybar.y -10;
 
 }
+
+void ballStick(){
+  for (int i=0; i<myball.length-1; i++) {
+    Ball ball = myball[i];
+  if (ball==null||ball.gone){
+  fill(255,227,170);
+  ellipse(mouseX,height-35,15,15);
+  }}}
