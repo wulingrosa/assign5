@@ -4,10 +4,6 @@ class Bar{
   int posY;
   int life;
   
-  void move(){
-posX = mouseX;
-}
-  
    Bar(int x, int y,  int l) {
     this.posX = x;
     this.posY = y;
@@ -21,5 +17,8 @@ posX = mouseX;
 
 }
 
+void move(){
+posX = mouseX;
+}
 
 
