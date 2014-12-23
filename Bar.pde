@@ -1,20 +1,23 @@
 class Bar{
-  float x;
-  float y;
-  float len;
+
+  int posX;
+  int posY;
+  int life;
   
-  void move(){
-    x = mouseX;
-  }
+   Bar(int x, int y,  int l) {
+    this.posX = x;
+    this.posY = y;
+    life = l;
+  } 
+  
   void display(){
-    fill(0, 191, 255);
-    rectMode(CENTER);
-    rect(x,y,len,10);
-    
+    fill(255,227,170);
+    rect(posX,posY,100,10);
   }
-  
-  Bar(float len){
-    this.y = height-10;
-    this.len = len;
-  }
+
 }
+
+void move(){
+posX = mouseX;
+}
+  }
