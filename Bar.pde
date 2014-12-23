@@ -2,7 +2,6 @@ class Bar{
 
   int posX;
   int posY;
-  int barSize = 100;
   float len;
 
 
@@ -13,7 +12,8 @@ class Bar{
   
   void display(){
     fill(255);
-    rect(posX,posY,barSize,barSize/10);
+    rectMode(CENTER);
+    rect(posX,posY,len,10);
   }
   
   void move(){
