@@ -10,6 +10,18 @@ final int GAME_LOSE = 2 ;
 final int GAME_PAUSE = 3 ;
 final int GAME_PLAYING = 4 ;
 final int GAME_READY = 5 ;
+int point;               
+int countBallFrame;    
+int ballNum;    
+int brickCount = 50;
+
+
+final int LIFE_THREE = 0;
+final int LIFE_TWO   = 1;
+final int LIFE_ONE   = 2;
+final int LIFE_NONE  = 3;
+int lifeState;
+
 */
 
 void setup(){
