@@ -5,9 +5,9 @@ class Brick {
   float col;
   float row;
   int size=30; 
-  int aSpeed = 1;
-  int aSize = 10;
-  int aScore = 10;
+  int BSpeed = 1;
+  int BSize = 10;
+  int BScore = 10;
   boolean die = false; 
 
  Brick(float col,float row){
