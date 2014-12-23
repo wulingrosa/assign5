@@ -3,17 +3,17 @@ class Brick {
   float x;
   float y;
   float col;
-  float row;
   float size;
+  boolean die = false; 
+
 
  Brick(float col,float row){
- size=30
-   x=150+col*size;
-   y=150+row*size;
+   x=col;
+   y=row;
  }
   
  void display() {
-  fill(0, 206, 209);
+  fill(242,233,94);
   rect(x,y,30,30);
   }
 
