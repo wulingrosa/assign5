@@ -3,7 +3,8 @@ class Ball{
   float y;
   float xSpeed;
   float ySpeed;
-  float size;
+  int size=15;
+  boolean gone = false;
 
   void move(){
 
@@ -16,6 +17,7 @@ class Ball{
     y+=ySpeed;
     }
   */
+  
     x+=xSpeed;
     y+=ySpeed;
     
@@ -26,22 +28,26 @@ class Ball{
       ySpeed*= -1;
     }
   
-   if (y>height-size/2 + 10){
-     x = board.x ;
-     y = board.y ;
-    }
+    float down = y+size/2;
+    float ball1 = bar.posY-10/2 ;
+    float bLeft = bar.posX-bar.barSize/2;
+    float bRight = bar.posX+bar.barSize/2;
+    
+   if (down >= balll && x>bLeft && x<bRight){
+        ySpeed *= -1;
+  } 
   }
 
   void display(){
+    fill(212,106,106);
     ellipse(x,y,size,size);
   }
-  
-  Ball(){
-    x = random(width);
-    y = random(height);
-    xSpeed = 5;
+
+    Ball(int col, int row) {
+    x = col;
+    y = row;
+    xSpeed = random(-10,10);
     ySpeed = 3;
-    size = 10;
   }
 
 }
