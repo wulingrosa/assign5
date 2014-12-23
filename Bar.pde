@@ -1,21 +1,21 @@
 class Bar{
 
-  int posX;
-  int posY;
+  int x;
+  int y;
   float len;
 
   void display(){
     fill(255);
     rectMode(CENTER);
-    rect(posX,posY,len,10);
+    rect(x,y,len,10);
   }
   
   void move(){
-  posX = mouseX;
+  x = mouseX;
   }
 
     Bar(float len){
-    this.posY = height-10;
+    this.y = height-10;
     this.len = len;
   }    
 }
