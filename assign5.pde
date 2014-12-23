@@ -10,9 +10,9 @@ final int LIFE_ONE   = 2;
 final int LIFE_NONE  = 3;
 int lifeState;
 
-int countBallFrame;    
+/*int countBallFrame;    
 int ballNum;   
-
+*/
 
 /*
 int status = 0;
@@ -177,8 +177,10 @@ void brickMaker(int total, int numInRow) {
      rect(x,y,30,30);
   }
 }
-  
-void mouseClicked(){
+
+
+/*
+void checkRecHit(){
 for (int i=0; i<myball.length-1;i++){
  Ball ball = myball[i];
 if (countBallFrame>30) {
@@ -191,12 +193,13 @@ if (countBallFrame>30) {
    }
     countBallFrame = 0;
 }}
-
+*/
 
 void mousePressed(){
   if(mouseButton==RIGHT&&myball.show==false){
     myball.show=true;}
 }
+  
   
 void mouseMoved(){
   if(myball.show==false){
