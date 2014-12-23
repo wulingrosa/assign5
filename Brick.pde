@@ -3,9 +3,12 @@ class Brick {
   float x;
   float y;
   float col;
-  float size;
+  float row;
+  int size=30; 
+  int aSpeed = 1;
+  int aSize = 10;
+  int aScore = 10;
   boolean die = false; 
-
 
  Brick(float col,float row){
    x=col;
@@ -13,9 +16,11 @@ class Brick {
  }
   
  void display() {
-  fill(242,233,94);
-  rect(x,y,30,30);
+  fill(170,57,57);
+  rect(x,y,size,size,3);
   }
-
+  
+ void move() {
+  }
 
 }
